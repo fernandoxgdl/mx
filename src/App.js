@@ -9,16 +9,19 @@ import Vision from "./pages/Vision";
 import Politicas from "./pages/Politicas";
 import Ubicacion from "./pages/Ubicacion";
 import logo from "./assets/logo.png";
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
 
+    <div className="imagen" >
    <img 
      src={logo} 
      alt="ModaLocalMX"
-     style={{width:"240px", marginRight:"50px"}}
+     
    />
+   </div>
       <Navbar />
 
       <Routes>
