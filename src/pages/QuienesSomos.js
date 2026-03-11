@@ -1,6 +1,6 @@
 function QuienesSomos() {
   return (
-    <div style={{padding:"20px"}}>
+    <div style={{padding:"20px", textAlign:'center'}}>
       <h1>¿Quiénes somos?</h1>
 
       <p>

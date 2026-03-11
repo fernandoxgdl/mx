@@ -1,6 +1,6 @@
 function Vision(){
  return(
-  <div style={{padding:"20px"}}>
+  <div style={{padding:"20px",textAlign:'center'}}>
    <h1>Visión</h1>
    <p>
    Ser un prototipo académico que demuestre la implementación de tecnologías web actuales 

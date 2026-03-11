@@ -1,6 +1,6 @@
 function Politicas(){
  return(
-  <div style={{padding:"20px"}}>
+  <div style={{padding:"20px", textAlign:'center'}}>
    <h1>Políticas de calidad</h1>
 
    <ul>

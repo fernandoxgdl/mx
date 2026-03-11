@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div style={{padding:"20px"}}>
+    <div style={{padding:"20px", textAlign:'center'}}>
       <h1>ModaLocalMX</h1>
 
       <p>

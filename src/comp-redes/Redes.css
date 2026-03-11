@@ -1,0 +1,36 @@
+.container{
+border: 1px solid;
+width: 5rem;
+margin-top: 6rem;
+margin-left: 1rem;
+border-radius: 45px;
+
+display:flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icono{
+
+  width: 4.5rem;
+  height: 4.5rem;
+  
+ 
+}
+
+
+.face{
+    width: 5rem;
+}
+.insta{
+    width: 5rem;
+  border-radius: 50%;
+}
+.twitch{
+    width: 4.5rem;
+  
+}
+.link{
+    width: 4.5rem;
+}

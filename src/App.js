@@ -10,18 +10,20 @@ import Politicas from "./pages/Politicas";
 import Ubicacion from "./pages/Ubicacion";
 import logo from "./assets/logo.png";
 import "./App.css";
+import  Chat  from "./comp-chat/Chat";
+import Redes from "./comp-redes/Redes";
 
 function App() {
   return (
+    <>
     <BrowserRouter>
 
-    <div className="imagen" >
-   <img 
-     src={logo} 
-     alt="ModaLocalMX"
-     
-   />
-   </div>
+      <div className="imagen">
+        <img
+          src={logo}
+          alt="ModaLocalMX" />
+      </div>
+
       <Navbar />
 
       <Routes>
@@ -34,7 +36,11 @@ function App() {
         <Route path="/login" element={<Login />} />
       </Routes>
 
+      <Chat />
     </BrowserRouter>
+    
+    <Redes />
+    </>
   );
 }
 
