@@ -158,7 +158,7 @@ export default function ChatAsistente() {
         }
         @keyframes pulse {
           0%, 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.5); }
-          50% { box-shadow: 0 0 0 10px rgba(124,58,237,0); }
+          50% { box-shadow: 0 0 0 10px rgba(103, 20, 247, 0); }
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'DM Sans', sans-serif; }
@@ -172,8 +172,8 @@ export default function ChatAsistente() {
       <button
         onClick={() => setIsOpen(o => !o)}
         style={{
-          position: "fixed", bottom: 38, right: 38,
-          width: 60, height: 60, borderRadius: "50%",
+          position: "fixed", bottom: 20, right: 15,
+          width: 40, height: 40, borderRadius: "50%",
           background: "linear-gradient(135deg, #1b6aa3, #c2c2eb)",
           border: "none", cursor: "pointer",
           display: "flex", alignItems: "center", justifyContent: "center",

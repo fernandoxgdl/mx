@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
@@ -18,7 +18,7 @@ import FAQ from "./comp-FAQ/FAQ";
 function App() {
   return (
     <>
-    <BrowserRouter>
+    <Router >
 
       <Logo />
       <Navbar />
@@ -37,7 +37,7 @@ function App() {
       <Chat />
       <FAQ />
 
-    </BrowserRouter>
+    </Router>
     
     <Redes />
     
