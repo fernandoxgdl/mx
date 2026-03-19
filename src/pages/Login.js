@@ -17,7 +17,18 @@ function Login() {
   };
 
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
+    <div style={{ padding:"20px", 
+     textAlign:'center',
+     minHeight: '70vh',
+     width:'60vw',
+     position: 'relative',
+     marginRight:'auto',
+     marginLeft:'auto',
+     marginTop:'20px',
+     display:'flex',
+     flexDirection:'column',
+     rowGap:'20px'}}>
+      
       <h2>Login del Sistema</h2>
 
       <form onSubmit={handleLogin}>

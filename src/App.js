@@ -8,22 +8,19 @@ import Mision from "./pages/Mision";
 import Vision from "./pages/Vision";
 import Politicas from "./pages/Politicas";
 import Ubicacion from "./pages/Ubicacion";
-import logo from "./assets/logo.png";
+import Logo from "./Logo";
 import "./App.css";
 import  Chat  from "./comp-chat/Chat";
 import Redes from "./comp-redes/Redes";
+import Preguntas from "./pages/Preguntas";
+import FAQ from "./comp-FAQ/FAQ";
 
 function App() {
   return (
     <>
     <BrowserRouter>
 
-      <div className="imagen">
-        <img
-          src={logo}
-          alt="ModaLocalMX" />
-      </div>
-
+      <Logo />
       <Navbar />
 
       <Routes>
@@ -34,12 +31,16 @@ function App() {
         <Route path="/politicas" element={<Politicas />} />
         <Route path="/ubicacion" element={<Ubicacion />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/preguntas" element={<Preguntas/>} />
       </Routes>
 
       <Chat />
+      <FAQ />
+
     </BrowserRouter>
     
     <Redes />
+    
     </>
   );
 }

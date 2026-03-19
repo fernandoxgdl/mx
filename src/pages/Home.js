@@ -1,15 +1,30 @@
+import './Home.css'
+import zh1 from '../assets/zh1.png';
+import zm1 from '../assets/zm1.png';
+import zh2 from '../assets/zh2.jpg';
+import zm2 from '../assets/zm2.png';
+import zh3 from '../assets/zh3.png';
+import zm3 from '../assets/zm3.png';
+
 function Home() {
   return (
-    <div style={{padding:"20px", textAlign:'center'}}>
-      <h1>ModaLocalMX</h1>
+    <div className='cuerpo'>
+      <h2>Elige los mejores productos</h2>
+      <ul>
+        <li className='item'> <img src={zh1} alt='zapato hombre 1'/> $ 4,000</li>
 
-      <p>
-El proyecto ModaLocalMX surge como respuesta al incremento de aranceles en productos de plataformas extranjeras de moda, lo que genera una oportunidad para fortalecer el comercio local.
-Actualmente muchos productores locales gestionan sus ventas e inventarios de forma manual, lo que provoca errores, pérdida de tiempo y dificultades para competir en el mercado digital.
-ModaLocalMX busca digitalizar estos procesos mediante un sistema web accesible desde distintos dispositivos.
-      </p>
+        <li className='item'> <img src={zm1} alt='zapato de mujer 1'/>$ 4,000</li>
+
+        <li className='item'> <img src={zh2} alt='zapato de hombre 2'/>$ 4,000</li>
+
+        <li className='item'> <img src={zm2} alt='zapato de mujer 2'/>$ 4,000</li>
+
+        <li className='item'> <img src={zh3} alt='zapato de hombre 3'/>$ 4,000</li>
+
+        <li className='item'> <img src={zm3} alt='zapato de mujer 3'/>$ 4,000</li>
+        
+      </ul>
     </div>
   );
 }
-
 export default Home;

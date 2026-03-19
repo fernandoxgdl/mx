@@ -1,16 +1,26 @@
 .navbar{
-     background:#0a3d62;
-   padding:10px;
+   background:#41a6ed;
    display: flex;
    justify-content: space-around;
-     flex-wrap: wrap;
+   position: relative; 
+   margin-left: auto;
+   margin-right: auto;
+   flex-wrap: wrap;
+   border-radius: 20px;
+   width:95vw;
+
 }
 
 .navbar a{
-    color:white;
-    font-size: 1.2rem;
-    text-decoration:none;
+color:white;
+font-size: 1.2rem;
+text-decoration:none;
+margin: 10px;
+}
 
+.navbar a:hover{
+   transform: scale(1.2);
+   font-weight: 800;
 }
 
 @media (max-width: 600px) {
@@ -18,11 +28,9 @@
     flex-direction: column;
     align-items: center;
   }
-
-  .navbar a {
-    margin-right: 0;
-    margin-bottom: 10px;
-    width: 100%;
-    text-align: center;
+  .navbar a {  
+  width: 95%;
+  text-align: center;
+  margin: 0;
   }
 }

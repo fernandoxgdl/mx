@@ -173,7 +173,7 @@ export default function ChatAsistente() {
         onClick={() => setIsOpen(o => !o)}
         style={{
           position: "fixed", bottom: 38, right: 38,
-          width: 100, height: 100, borderRadius: "50%",
+          width: 60, height: 60, borderRadius: "50%",
           background: "linear-gradient(135deg, #1b6aa3, #c2c2eb)",
           border: "none", cursor: "pointer",
           display: "flex", alignItems: "center", justifyContent: "center",
@@ -202,7 +202,7 @@ export default function ChatAsistente() {
       {isOpen && (
         <div style={{
           position: "fixed", bottom: 100, right: 28,
-          width: 370, height: 560,
+          width: 300, height: 460,
           background: "linear-gradient(160deg, #13111c 0%, #0f0f1a 100%)",
           borderRadius: 24,
           border: "1px solid rgba(124,58,237,0.25)",
