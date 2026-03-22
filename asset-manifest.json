@@ -1,9 +1,13 @@
 {
   "files": {
-    "main.css": "/mx/static/css/main.0fdd0902.css",
-    "main.js": "/mx/static/js/main.063e6138.js",
+    "main.css": "/mx/static/css/main.67c7fae2.css",
+    "main.js": "/mx/static/js/main.1d2989ff.js",
     "static/js/453.864a1fbe.chunk.js": "/mx/static/js/453.864a1fbe.chunk.js",
     "static/media/logo.png": "/mx/static/media/logo.a77f4574a3cfaa1d15a6.png",
+    "static/media/zapato3.png": "/mx/static/media/zapato3.e4f96ed4e1760065431c.png",
+    "static/media/zapato4.png": "/mx/static/media/zapato4.3b5e512d6a653db31f38.png",
+    "static/media/zapato2.png": "/mx/static/media/zapato2.4d93865cf56dd20b0e4c.png",
+    "static/media/zapato1.png": "/mx/static/media/zapato1.b0153ccaa1ce18928a89.png",
     "static/media/zh1.png": "/mx/static/media/zh1.1ea96b0e6a0408e226c6.png",
     "static/media/zm3.png": "/mx/static/media/zm3.cf18204b0cb69570333a.png",
     "static/media/zm1.png": "/mx/static/media/zm1.32d0a3a828d1ee948343.png",
@@ -15,12 +19,12 @@
     "static/media/twitch.svg": "/mx/static/media/twitch.a58638d5d3d6c508a9cd73cca9c1e4b1.svg",
     "static/media/face.svg": "/mx/static/media/face.d2c7680ef9d2d0ca8db3e4b8de6b1fb1.svg",
     "index.html": "/mx/index.html",
-    "main.0fdd0902.css.map": "/mx/static/css/main.0fdd0902.css.map",
-    "main.063e6138.js.map": "/mx/static/js/main.063e6138.js.map",
+    "main.67c7fae2.css.map": "/mx/static/css/main.67c7fae2.css.map",
+    "main.1d2989ff.js.map": "/mx/static/js/main.1d2989ff.js.map",
     "453.864a1fbe.chunk.js.map": "/mx/static/js/453.864a1fbe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fdd0902.css",
-    "static/js/main.063e6138.js"
+    "static/css/main.67c7fae2.css",
+    "static/js/main.1d2989ff.js"
   ]
 }
