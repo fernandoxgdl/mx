@@ -5,11 +5,17 @@ import zh2 from '../assets/zh2.jpg';
 import zm2 from '../assets/zm2.png';
 import zh3 from '../assets/zh3.png';
 import zm3 from '../assets/zm3.png';
+import Slide from '../comp-slides/Slide';
 
 function Home() {
   return (
+    
+
+
     <div className='cuerpo'>
-      <h2>Elige los mejores productos</h2>
+      <div className='slide' ><Slide/></div>
+
+      <h2>Elige los mejores productos con envio gratis 😁👍</h2>
       <ul>
         <li className='item'> <img src={zh1} alt='zapato hombre 1'/> $ 4,000</li>
 

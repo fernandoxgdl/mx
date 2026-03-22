@@ -14,6 +14,7 @@ import  Chat  from "./comp-chat/Chat";
 import Redes from "./comp-redes/Redes";
 import Preguntas from "./pages/Preguntas";
 import FAQ from "./comp-FAQ/FAQ";
+import Valoracion from "./comp-rates/Valoracion";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       </Routes>
 
       <Chat />
+      <Valoracion/>
       <FAQ />
 
     </Router>
