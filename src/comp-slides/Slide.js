@@ -28,11 +28,13 @@ function anterior (){
     <div className="uno">
 <h3>OFERTAS DE 70 % </h3>
 
+<div className="imagen-wrap">
 <img src={slides[indice].imagen} alt= {slides[indice].titulo}/>
+</div>
 
     <div className="boton">
-<button onClick={anterior}>anterior</button>
-<button onClick={siguiente}>siguiente</button>
+<button onClick={anterior} className="anterior">anterior</button>
+<button onClick={siguiente} className="siguiente">siguiente</button>
  
     </div>
     </div>

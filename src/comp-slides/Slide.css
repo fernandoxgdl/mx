@@ -1,4 +1,4 @@
-.slide{
+/*.slide{
     
     position: relative;
     margin-left: auto;
@@ -14,19 +14,31 @@
     
     margin-bottom: 2rem;;
  
-}
+}*/
 .uno img{
 width: 100%;
 max-width: 250px;  
 min-height: 200px;
 max-height: 250px;  
+object-fit: contain;
       
 }
 
+.uno .imagen-wrap {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .uno{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
 }
 .uno .boton{
     display: flex;
@@ -42,4 +54,10 @@ max-height: 250px;
     border: 2px solid rgb(9, 255, 0);
     font-weight: 700;
 
+}
+.uno .boton button:hover{
+    background-color: rgb(9, 255, 0);
+    color: rgb(95, 95, 95);
+    border: 2px solid rgb(95, 95, 95)
+    
 }

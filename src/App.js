@@ -25,7 +25,8 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Ubicacion/>} />
+        <Route path="/inicio" element={<Home />} />
         <Route path="/quienes" element={<QuienesSomos />} />
         <Route path="/mision" element={<Mision />} />
         <Route path="/vision" element={<Vision />} />
@@ -36,6 +37,7 @@ function App() {
       </Routes>
 
       <Chat />
+     
       <Valoracion/>
       <FAQ />
 

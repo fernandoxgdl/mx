@@ -1,7 +1,7 @@
 footer{
     
      position:relative; 
-     margin-top: 40px;
+     margin-top: 5rem;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -9,14 +9,25 @@ footer{
   
 }
 .linki{
-width: 150px;
+width: 130px;
 border-radius: 10px;
-font-size: 30px;
-color: rgb(30, 255, 0);
+font-size: 25px;
+color: rgb(115, 255, 0);
 font-weight: 900;
 border: 2px solid rgb(115, 255, 0);
 background-color: rgb(92, 92, 92);
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
+.copy{
+    font-size: x-small;
+}
+a{
+    text-decoration: none;
+}
+
 .linki:hover{
       transform: scale(1.1);
       background-color: black;

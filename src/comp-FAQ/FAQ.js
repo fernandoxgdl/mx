@@ -11,9 +11,9 @@ function FAQ() {
       <Link to="/preguntas" >
         <button className="linki"> FAQ's</button>
       </Link>
-       <p>© 2026 Tu Tienda</p>
+       <p><span className="copy">© 2026 Moda MX</span></p>
     </footer>
   )
 }
 
-export default FAQ
+export default FAQ;
