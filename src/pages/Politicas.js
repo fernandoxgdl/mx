@@ -1,3 +1,5 @@
+import Comentarios from "../comp-comentario/Comentario";
+
 function Politicas(){
  return(
   <div style={{
@@ -11,18 +13,17 @@ function Politicas(){
      marginTop:'20px',
      display:'flex',
      flexDirection:'column',
-     rowGap:'20px'
+     rowGap:'40px',
+     alignItems:'center'
    }}>
-   <h1>Políticas de calidad</h1>
 
-   <ul>
-<li>Desarrollar un sistema funcional y accesible para los usuarios.</li>
-<li>Garantizar una interfaz clara y fácil de utilizar.</li>
-<li>Mantener buenas prácticas de programación.</li>
-<li>Validar continuamente el funcionamiento del sistema.</li>
-<li>Mejorar el sistema mediante pruebas y retroalimentación constante.</li>
-   </ul>
-  </div>
+   <h1>Problemas.? dejanos un comentario</h1>
+   <p>Dejanos un comentario o ponte en contacto con nosotros.</p>
+  
+   <p>Numero de contacto: 55-1234-5678<br/>
+   Correo electrónico: info@modamx.com</p>
+ <Comentarios/>
+   </div>
  );
 }
 

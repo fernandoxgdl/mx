@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+
 import './Preguntas.css';
 
 function Preguntas() {

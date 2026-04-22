@@ -9,7 +9,7 @@ function Navbar(){
    <Link to="/quienes">Quienes Somos</Link>
    <Link to="/mision">Misión</Link>
    <Link to="/vision">Visión</Link>
-   <Link to="/politicas">Políticas</Link>
+   <Link to="/politicas">Problemas ??</Link>
    <Link to="/login">Login</Link>
    
   </div>

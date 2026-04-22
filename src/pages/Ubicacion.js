@@ -18,18 +18,18 @@ function Ubicacion(){
 propios para centralizar su oferta, lo que limita su alcance hacia nuevos 
 consumidores y dificulta la gestión eficiente de su inventario de manera tecnológica 
 y organizada.</p>
+
+<br/>
+
    <h1>Contexto</h1>
-   <p>Moda mx es una pequeña empresa local que se dedica a la venta de ropa y accesorios. Actualmente, no cuenta con una presencia en la web, lo que limita su alcance y oportunidades de crecimiento. <br/>La empresa busca una solución tecnológica que le permita crear y mantener una presencia en línea, lo que impulsará sus ventas y les permitirá competir en el mercado digital.<br/> El sistema ofrece un catálogo de productos 
+   <p>Moda mx es una pequeña empresa local que se dedica a la venta de calzado. Actualmente, no cuenta con una presencia en la web, lo que limita su alcance y oportunidades de crecimiento. <br/>La empresa busca una solución tecnológica que le permita crear y mantener una presencia en línea, lo que impulsará sus ventas y les permitirá competir en el mercado digital.<br/> El sistema ofrece un catálogo de productos 
 para los consumidores, un panel de gestión de inventario para el productor y 
-herramientas de comunicación directa para fortalecer el vínculo comercial dentro de 
-la comunidad.</p>
+herramientas de comunicación directa para fortalecer el vínculo comercial cliente/vendedor.</p>
+
+<br/>
+
     <h1>Propuesta de Solución</h1>
-    <p> Desarrollo de un prototipo de sistema web funcional, 
-escalable y de alto rendimiento, construido bajo la metodología ágil Scrum. La 
-solución técnica utiliza el framework React para interfaces dinámicas y GitHub 
-Pages para un despliegue y control de versiones colaborativo, permitiendo entregas 
-iterativas que resuelven las necesidades de visibilidad y administración de los 
-productores locales.</p>
+    <p> Moda MX será dueño de un sistema web, mejor conocido como un e-commerce donde pueda comercializar sus productos.<br/> Esto abre una puerta y un canal para que Moda MX incremente sus ganancias en un inmenso flujo de posibles clientes en la web.</p>
   </div>
  );
 }

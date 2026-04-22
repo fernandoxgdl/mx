@@ -15,6 +15,7 @@ import Redes from "./comp-redes/Redes";
 import Preguntas from "./pages/Preguntas";
 import FAQ from "./comp-FAQ/FAQ";
 import Valoracion from "./comp-rates/Valoracion";
+import Tienda from "./comp-tienda/Tienda";
 
 function App() {
   return (
@@ -25,15 +26,16 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Ubicacion/>} />
-        <Route path="/inicio" element={<Home />} />
-        <Route path="/quienes" element={<QuienesSomos />} />
-        <Route path="/mision" element={<Mision />} />
-        <Route path="/vision" element={<Vision />} />
-        <Route path="/politicas" element={<Politicas />} />
-        <Route path="/ubicacion" element={<Ubicacion />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/preguntas" element={<Preguntas/>} />
+        <Route path="/"             element={<Ubicacion/>} />
+        <Route path="/inicio"       element={<Home />} />
+        <Route path="/quienes"      element={<QuienesSomos />} />
+        <Route path="/mision"       element={<Mision />} />
+        <Route path="/vision"       element={<Vision />} />
+        <Route path="/politicas"    element={<Politicas />} />
+        <Route path="/ubicacion"    element={<Ubicacion />} />
+        <Route path="/login"        element={<Login />} />
+        <Route path="/preguntas"    element={<Preguntas/>} />
+        <Route path="/tienda"       element={<Tienda />} />
       </Routes>
 
       <Chat />

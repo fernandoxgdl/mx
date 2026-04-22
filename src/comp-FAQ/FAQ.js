@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom"
+
 import "./FAQ.css"
 import { Link } from "react-router-dom"
 
