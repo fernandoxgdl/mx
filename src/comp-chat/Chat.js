@@ -172,7 +172,7 @@ export default function ChatAsistente() {
       <button
         onClick={() => setIsOpen(o => !o)}
         style={{
-          position: "fixed", bottom: 20, right: 15,
+          position: "fixed", bottom: 100, left: 5,
           width: 40, height: 40, borderRadius: "50%",
           background: "linear-gradient(135deg, #1b6aa3, #c2c2eb)",
           border: "none", cursor: "pointer",

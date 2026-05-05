@@ -1,4 +1,5 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from 'react';
 
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
@@ -16,12 +17,54 @@ import Preguntas from "./pages/Preguntas";
 import FAQ from "./comp-FAQ/FAQ";
 import Valoracion from "./comp-rates/Valoracion";
 import Tienda from "./comp-tienda/Tienda";
+import Carrito from "./comp-tienda/Carrito";
+import CartFab from "./comp-tienda/cartfab";
+
 
 function App() {
+
+  const [carrito, setCarrito] = useState({});
+
+  const agregar = (producto) => {
+    setCarrito(prev => {
+      const existe = prev[producto.id];
+      return {
+        ...prev,
+        [producto.id]: {
+          ...producto,
+          cantidad: existe ? existe.cantidad + 1 : 1,
+        },
+      };
+    });
+  };
+
+  const actualizarCantidad = (id, nuevaCantidad) => {
+    if (nuevaCantidad <= 0) {
+      eliminarItem(id);
+      return;
+    }
+    setCarrito(prev => ({
+      ...prev,
+      [id]: {
+        ...prev[id],
+        cantidad: nuevaCantidad,
+      },
+    }));
+  };
+
+  const eliminarItem = (id) => {
+    setCarrito(prev => {
+      const nuevo = { ...prev };
+      delete nuevo[id];
+      return nuevo;
+    });
+  };
+
+  const totalItems = Object.values(carrito).reduce((acc, item) => acc + item.cantidad, 0);
+
   return (
     <>
     <Router >
-
       <Logo />
       <Navbar />
 
@@ -35,9 +78,14 @@ function App() {
         <Route path="/ubicacion"    element={<Ubicacion />} />
         <Route path="/login"        element={<Login />} />
         <Route path="/preguntas"    element={<Preguntas/>} />
-        <Route path="/tienda"       element={<Tienda />} />
+        <Route path="/tienda"       element={<Tienda agregar={agregar} totalItems={totalItems} />} />
+
+        <Route path="/carrito"   element={<Carrito carrito={carrito} actualizarCantidad={actualizarCantidad} eliminarItem={eliminarItem} />} />
+
       </Routes>
 
+       <CartFab totalItems={totalItems} />
+       
       <Chat />
      
       <Valoracion/>
