@@ -9,7 +9,7 @@ function Tienda({ agregar, totalItems }) {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    fetch("${process.env.REACT_APP_API_URL}/api/productos")
+    fetch(`${process.env.REACT_APP_API_URL}/api/productos`)
       .then((res) => res.json())
       .then((data) => setProductos(data))
       .catch((err) => console.error("Error:", err));
