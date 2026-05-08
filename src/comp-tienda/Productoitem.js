@@ -3,10 +3,7 @@ function Productoitem({ producto, agregar }) {
 
   return (
     <div className="card">
-      <img
-        src={`https://modamx-backend.onrender.com/api/productos${producto.imagen}`}
-        alt={producto.nombre}
-      />
+      <img src={urlImagen} alt={producto.nombre} />
       <div className="sub">
         <h3>{producto.nombre}</h3>
         <p>${producto.precio}</p>
