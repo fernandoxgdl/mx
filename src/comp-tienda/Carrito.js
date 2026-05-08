@@ -52,7 +52,7 @@ function Carrito({ carrito, actualizarCantidad, eliminarItem }) {
           {items.map((item) => (
             <div key={item.id} className="carrito-item">
               <div className="item-imagen">
-                <img src={item.imagen} alt={item.nombre} className="item-img" />
+                <img src={urlImagen} alt={item.nombre} className="item-img" />
               </div>
 
               <div className="item-detalles">
