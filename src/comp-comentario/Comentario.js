@@ -1,63 +1,114 @@
-import  { useState, useEffect } from 'react';
+import { useState } from "react";
+import "./Comentario.css";
 
+function Comentarios (){
+  const [ form, setForm ] = useState({
+    nombre: "",
+    telefono: "",
+    mensaje: ""
+  });
 
+  const [estado, setEstado] = useState(null);
 
- function Comentarios(){
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    });
+    
+  };
 
-    const [comentario, setComentario] = useState("");
-    const [lista, setLista] = useState([]);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setEstado("enviando");
 
-    useEffect(() => {
-        const data = JSON.parse(localStorage.getItem("comentarios"));
-        if (data) setLista(data);
-    },[]);
+    try {
 
-    useEffect(() => {
-        localStorage.setItem("comentarios", JSON.stringify(lista));
-    }, [lista]);
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/comentario`,{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(form)
+      });
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+      if (res.ok) {
+        setEstado('ok');
+        setForm({
+          nombre: "",
+          telefono: "",
+          mensaje: ""
+        });
 
-        if (!comentario.trim()) return;
+      } else{
+        setEstado('error');
+      } 
 
-        const nuevoComentario = {
-            id: Date.now(),
-            texto: comentario,
-            fecha: new Date().toLocaleString()
-        };
+    }catch (err) {
+        console.error(err);
+        setEstado('error');
+      }
 
-        setLista([nuevoComentario, ...lista]);
-        setComentario("");
-    };
+      };
+    
+  return (
+    <div className="comentario-container">
+      <h2 className="comentario-titulo">Alguna duda?</h2>
+      <p className="Comentario-subtitulo">Deja tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+      <form className="comentario-form" onSubmit={handleSubmit}>
 
-    return (
-        <div style={{ marginTop:'20px'}}>
-            <form onSubmit={handleSubmit}>
-                <textarea
-                    value={comentario}
-                    onChange={(e) => setComentario(e.target.value)}
-                    placeholder="Escribe tu comentario aquí..."
-                    rows="4"
-                    cols="50"
-                />
-                <br />
-                <button type="submit" style={{marginTop:'10px', padding:'5px', borderRadius:'10px', width:'70px'}}>Enviar </button>
-            </form>
-
-            <ul>
-                {lista.map((item) => (
-                    <li key={item.id}>
-                        <p>{item.texto}</p>
-                        <small>{item.fecha}</small>
-                    </li>
-                ))}
-            </ul>
+        <div className= "form-group">
+          <label>Nombre</label>
+          <input
+            type="text"
+            name="nombre"
+            value={form.nombre}
+            onChange={handleChange}
+            placeholder="Escribe tu Nombre Aqui..!"
+            required
+          />
         </div>
-    );
 
-    }
+        <div className= "form-group">
+          <label>Telefono</label>
+          <input
+            type="tel"
+            name="telefono"
+            value={form.telefono}
+            onChange={handleChange}
+            placeholder="Escribe tu Telefono Aqui..!"
+            required
+          />
+        </div>
 
+        <div className= "form-group">
+          <label>Mensaje</label>
+          <textarea
+            name="mensaje"
+            value={form.mensaje}
+            onChange={handleChange}
+            placeholder="Dinod como ayudarte..!"
+            rows='5'
+            required
+          />
+        </div>
 
+        <button type="submit" className="btn-enviar"
+          disabled={estado === "enviando"}
+        >
+          {estado === "enviando" ? "Enviando..." : "Enviar mensaje"}
+        </button>
+
+        {estado === 'ok' && (
+          <p className="mensaje-ok">¡Mensaje enviado con éxito!</p>
+        )}
+        {estado === 'error' && (
+          <p className="mensaje-error">Error al enviar el mensaje. Por favor, inténtalo de nuevo.</p>
+        )}
+      </form>
+    </div>
+  );
+}
 
 export default Comentarios;
+  

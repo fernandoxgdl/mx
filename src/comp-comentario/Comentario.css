@@ -1,0 +1,86 @@
+.comentario-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto 5rem auto;
+}
+
+.comentario-titulo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.comentario-subtitulo {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.comentario-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #41a6ed;
+}
+
+.btn-enviar {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #41a6ed;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.btn-enviar:hover {
+  background: #1d8fd6;
+}
+
+.btn-enviar:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.mensaje-ok {
+  color: #16a34a;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mensaje-error {
+  color: #ef4444;
+  font-weight: 600;
+  text-align: center;
+}
