@@ -138,7 +138,7 @@ function Comentarios() {
 
       <div className="total-comentarios">
         <span className="contador-numero">{total}</span>
-        <span className="contador-label">Comentarios Recibidos</span>
+        <span className="contador-label">Comentarios Recibidos hasta el momento</span>
       </div>
 
     </div>

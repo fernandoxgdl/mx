@@ -1,7 +1,8 @@
 .comentario-container {
   width: 90%;
   max-width: 600px;
-  margin: 40px auto 5rem auto;
+  flex: 1;
+  
 }
 
 .comentario-titulo {
@@ -89,9 +90,10 @@
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  justify-content: center;
   width: 90%;
   max-width: 800px;
-  flex: 1;
+  margin: 40px auto 5rem auto;
 }
 
 .total-comentarios {
