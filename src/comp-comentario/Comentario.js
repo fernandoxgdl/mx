@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Comentario.css";
 
 function Comentarios() {
@@ -57,7 +57,9 @@ function Comentarios() {
           telefono: "",
           mensaje: "",
         });
+
         fetchTotal();
+
       } else {
         setEstado("error");
       }
@@ -69,13 +71,16 @@ function Comentarios() {
 
   return (
     <div className="comentario-main">
+
       <div className="comentario-container">
         <h2 className="comentario-titulo">Alguna duda?</h2>
         <p className="Comentario-subtitulo">
           Deja tu comentario y nos pondremos en contacto contigo lo antes
           posible.
         </p>
+
         <form className="comentario-form" onSubmit={handleSubmit}>
+
           <div className="form-group">
             <label>Nombre</label>
             <input
@@ -135,6 +140,7 @@ function Comentarios() {
         <span className="contador-numero">{total}</span>
         <span className="contador-label">Comentarios Recibidos</span>
       </div>
+
     </div>
   );
 }
