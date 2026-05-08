@@ -49,53 +49,56 @@ function Carrito({ carrito, actualizarCantidad, eliminarItem }) {
         </div>
 
         <div className="carrito-items">
-          {items.map((item) => (
-            <div key={item.id} className="carrito-item">
-              <div className="item-imagen">
-                <img src={urlImagen} alt={item.nombre} className="item-img" />
-              </div>
+          {items.map((item) => {
+            const urlImagen = `${process.env.REACT_APP_API_URL}/imagenes/${item.imagen}`;
+            return (
+              <div key={item.id} className="carrito-item">
+                <div className="item-imagen">
+                  <img src={urlImagen} alt={item.nombre} className="item-img" />
+                </div>
 
-              <div className="item-detalles">
-                <h3>{item.nombre}</h3>
-                <span className="item-pecio">{fmt(item.precio)}c/u</span>
-              </div>
+                <div className="item-detalles">
+                  <h3>{item.nombre}</h3>
+                  <span className="item-pecio">{fmt(item.precio)}c/u</span>
+                </div>
 
-              <div className="item-controles">
-                <div className="cantidad-control">
+                <div className="item-controles">
+                  <div className="cantidad-control">
+                    <button
+                      className="btn-cantidad"
+                      onClick={() =>
+                        actualizarCantidad(item.id, item.cantidad - 1)
+                      }
+                    >
+                      ➖
+                    </button>
+
+                    <span className="cantidad">{item.cantidad}</span>
+
+                    <button
+                      className="btn-cantidad"
+                      onClick={() =>
+                        actualizarCantidad(item.id, item.cantidad + 1)
+                      }
+                    >
+                      ➕
+                    </button>
+                  </div>
+                  <span className="item-subtotal">
+                    {fmt(item.precio * item.cantidad)}
+                  </span>
+
                   <button
-                    className="btn-cantidad"
-                    onClick={() =>
-                      actualizarCantidad(item.id, item.cantidad - 1)
-                    }
+                    className="btn-eliminar"
+                    onClick={() => eliminarItem(item.id)}
+                    title="Eliminar"
                   >
-                    ➖
-                  </button>
-
-                  <span className="cantidad">{item.cantidad}</span>
-
-                  <button
-                    className="btn-cantidad"
-                    onClick={() =>
-                      actualizarCantidad(item.id, item.cantidad + 1)
-                    }
-                  >
-                    ➕
+                    ✖️ Eliminar
                   </button>
                 </div>
-                <span className="item-subtotal">
-                  {fmt(item.precio * item.cantidad)}
-                </span>
-
-                <button
-                  className="btn-eliminar"
-                  onClick={() => eliminarItem(item.id)}
-                  title="Eliminar"
-                >
-                  ✖️ Eliminar
-                </button>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
